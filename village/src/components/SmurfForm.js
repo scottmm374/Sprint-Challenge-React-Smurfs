@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button, Form, FormGroup, Label, Input, } from 'reactstrap';
 // import axios from 'axios';
 
 class SmurfForm extends Component {
@@ -15,6 +16,7 @@ class SmurfForm extends Component {
     event.preventDefault();
     const { name, age, height } = this.state
     console.log('newsmurf', name, age, height)
+    
     // add code to create the smurf using the api
 
     this.setState({
@@ -31,27 +33,37 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
+        <Form onSubmit={this.addSmurf}>
+          <FormGroup>
+            <Label for='name'>Name</Label>
+          <Input
             onChange={this.handleInputChange}
-            placeholder="name"
+            placeholder="add name"
             value={this.state.name}
             name="name"
           />
-          <input
+          </FormGroup>
+          <FormGroup>
+            <Label for='age'>Age</Label>
+          <Input
             onChange={this.handleInputChange}
-            placeholder="age"
+            placeholder="add age"
             value={this.state.age}
             name="age"
           />
-          <input
+          </FormGroup>
+          <FormGroup>
+          <Label for='height'>Height</Label>
+          <Input
             onChange={this.handleInputChange}
-            placeholder="height"
+            placeholder="add height"
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
-        </form>
+          </FormGroup>
+          <Button color='warning' type="submit">Add to the village</Button>
+          
+        </Form>
       </div>
     );
   }
@@ -60,56 +72,3 @@ class SmurfForm extends Component {
 export default SmurfForm;
 
 
-// class SmurfForm extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       name: '',
-//       age: '',
-//       height: ''
-//     };
-//   }
-
-//   addSmurf = event => {
-//     event.preventDefault();
-//     // add code to create the smurf using the api
-
-//     this.setState({
-//       name: '',
-//       age: '',
-//       height: ''
-//     });
-//   }
-
-//   handleInputChange = e => {
-//     this.setState({ [e.target.name]: e.target.value });
-//   };
-
-//   render() {
-//     return (
-//       <div className="SmurfForm">
-//         <form onSubmit={this.addSmurf}>
-//           <input
-//             onChange={this.handleInputChange}
-//             placeholder="name"
-//             value={this.state.name}
-//             name="name"
-//           />
-//           <input
-//             onChange={this.handleInputChange}
-//             placeholder="age"
-//             value={this.state.age}
-//             name="age"
-//           />
-//           <input
-//             onChange={this.handleInputChange}
-//             placeholder="height"
-//             value={this.state.height}
-//             name="height"
-//           />
-//           <button type="submit">Add to the village</button>
-//         </form>
-//       </div>
-//     );
-//   }
-// }
