@@ -20,11 +20,11 @@ componentDidMount() {
     .catch(err => console.log(err));
 }
 
-addSmurf = smurf => {
+addSmurfInfo = smurf => {
   axios
     .post('http://localhost:3333/smurfs', smurf)
     .then(res => { this.setState({ smurfs: res.data });
-    
+
     })
     .catch(err => console.log(err));
 };
@@ -34,7 +34,7 @@ addSmurf = smurf => {
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm addSmurfInfo={this.addSmurfInfo}/>
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
