@@ -45,8 +45,6 @@ addSmurfInfo = smurf => {
         </ul>
         <Route exact path="/" render={props => ( <Smurfs {...props} smurfs={this.state.smurfs} />)} />
         <Route path='/smurf-form' render={props => ( <SmurfForm {...props} addSmurfInfo={this.addSmurfInfo}/>)} />
-        {/* // <SmurfForm addSmurfInfo={this.addSmurfInfo}/>
-        <Smurfs smurfs={this.state.smurfs} /> */}
       </div>
     );
   }
