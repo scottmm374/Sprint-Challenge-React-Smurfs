@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 // import axios from 'axios';
 
 class SmurfForm extends Component {
@@ -34,30 +34,31 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
+        <Container>
         <Form onSubmit={this.addSmurf}>
           <FormGroup>
-            <Label for='name'>Name</Label>
+            <Label for='name'>Smurfy Name</Label>
             <Input
               onChange={this.handleInputChange}
-              placeholder="add name"
+              placeholder="Enter name"
               value={this.state.name}
               name="name"
             />
           </FormGroup>
           <FormGroup>
-            <Label for='age'>Age</Label>
+            <Label for='age'>Smurfy Age</Label>
             <Input
               onChange={this.handleInputChange}
-              placeholder="add age"
+              placeholder="Enter age"
               value={this.state.age}
               name="age"
             />
           </FormGroup>
           <FormGroup>
-            <Label for='height'>Height</Label>
+            <Label for='height'>Smurfy Height</Label>
             <Input
               onChange={this.handleInputChange}
-              placeholder="add height"
+              placeholder="Enter height"
               value={this.state.height}
               name="height"
             />
@@ -65,6 +66,8 @@ class SmurfForm extends Component {
           <Button color='warning' type="submit">Add to the village</Button>
 
         </Form>
+        </Container>
+        
       </div>
     );
   }

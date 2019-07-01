@@ -33,23 +33,24 @@ class App extends Component {
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
   // Notice what your map function is looping over and returning inside of Smurfs.
   // You'll need to make sure you have the right properties on state and pass them down to props.
-  
+
   render() {
     return (
       <div className="App">
-
-        <ul className='nav'>
+        <ul className="nav">
           <li className="nav-link">
-            <NavLink exact to='/' activeClassName='activeNavButton'>Smurfs</NavLink>
+            <NavLink exact to="/" activeClassName="activeNavButton">Smurfs</NavLink> 
           </li>
           <li className="nav-link">
-
-            <NavLink exact to="/smurf-form" activeClassName='activeNavButton'>Add Smurf</NavLink>
-
+            <NavLink exact to="/smurf-form" activeClassName="activeNavButton">Add Smurf</NavLink> 
           </li>
         </ul>
+       <div className="smurfs">
         <Route exact path="/" render={props => (<Smurfs {...props} smurfs={this.state.smurfs} />)} />
-        <Route path='/smurf-form' render={props => (<SmurfForm {...props} addSmurfInfo={this.addSmurfInfo} />)} />
+        </div>
+        <div className="smurf-form-container">
+        <Route path="/smurf-form" render={props => (<SmurfForm {...props} addSmurfInfo={this.addSmurfInfo} />)} />
+        </div>
       </div>
     );
   }
