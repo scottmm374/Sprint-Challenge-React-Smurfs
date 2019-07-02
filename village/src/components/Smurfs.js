@@ -12,7 +12,7 @@ class Smurfs extends Component {
             <Col>
               <Card>
                 <CardBody>
-                  <CardHeader>Smurf Village</CardHeader>
+                  <CardHeader className="card-head">Smurf Village</CardHeader>
                   <ul>
                     {this.props.smurfs.map(smurf => {
                       return (
