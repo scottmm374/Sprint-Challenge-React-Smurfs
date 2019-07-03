@@ -1,37 +1,21 @@
 import React, { Component } from 'react';
-import { Container, Card, CardBody, CardHeader, Row, Col } from 'reactstrap';
-
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
   render() {
     return (
       <div className="Smurfs">
-        <Container>
-          <Row>
-            <Col>
-              <Card className="card">
-                <CardBody>
-                  <CardHeader className="card-head">Smurf Village</CardHeader>
-                  {/* <ul> */}
-                    {this.props.smurfs.map(smurf => {
-                      return (
-                        <Smurf
-                          name={smurf.name}
-                          id={smurf.id}
-                          age={smurf.age}
-                          height={smurf.height}
-                          key={smurf.id}
-                        />
-                      );
-                    })}
-                  {/* </ul> */}
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-
+        {this.props.smurfs.map(smurf => {
+          return (
+            <Smurf
+              name={smurf.name}
+              id={smurf.id}
+              age={smurf.age}
+              height={smurf.height}
+              key={smurf.id}
+            />
+          );
+        })}
       </div>
     );
   }
