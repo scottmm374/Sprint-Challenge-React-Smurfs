@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Card, CardBody, CardHeader, CardText, Row, Col } from 'reactstrap';
+import { Container, Card, CardBody, CardHeader, Row, Col } from 'reactstrap';
 
 import Smurf from './Smurf';
 
