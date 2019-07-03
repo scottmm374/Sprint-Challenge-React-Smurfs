@@ -10,10 +10,10 @@ class Smurfs extends Component {
         <Container>
           <Row>
             <Col>
-              <Card>
+              <Card className="card">
                 <CardBody>
                   <CardHeader className="card-head">Smurf Village</CardHeader>
-                  <ul>
+                  {/* <ul> */}
                     {this.props.smurfs.map(smurf => {
                       return (
                         <Smurf
@@ -25,7 +25,7 @@ class Smurfs extends Component {
                         />
                       );
                     })}
-                  </ul>
+                  {/* </ul> */}
                 </CardBody>
               </Card>
             </Col>
