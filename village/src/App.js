@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { Nav, NavItem, NavLink as NavLnk, Container } from 'reactstrap';
+import smurf from './asssets/smurf-background.jpg';
 
 import './App.css';
 import SmurfForm from './components/SmurfForm';
@@ -39,21 +40,25 @@ class App extends Component {
     return (
       <div className="App">
         <Container>
+          <img className="smurf-logo" src={smurf} alt="Smurf-background" />
+        </Container>
+        <Container>
           <Nav className='nav'>
             <NavItem className="nav-link">
-              <NavLink exact to="/" activeClassName="activeNavButton" tag={NavLnk}>Smurfs</NavLink>
+              <NavLink exact to="/" activeClassName="activeNavButton" tag={NavLnk}>Smurf Village</NavLink>
             </NavItem>
             <NavItem className="nav-link">
               <NavLink exact to="/smurf-form" activeClassName="activeNavButton" tag={NavLnk}>Add Smurf</NavLink>
             </NavItem>
-            <div className="smurfs">
-              <Route exact path="/" render={props => (<Smurfs {...props} smurfs={this.state.smurfs} />)} />
-            </div>
-            <div className="smurf-form-container">
-              <Route path="/smurf-form" render={props => (<SmurfForm {...props} addSmurfInfo={this.addSmurfInfo} />)} />
-            </div>
           </Nav>
         </Container>
+        <Container className="smurfs">
+          <Route exact path="/" render={props => (<Smurfs {...props} smurfs={this.state.smurfs} />)} />
+        </Container>
+        <Container className="smurf-form-container">
+          <Route path="/smurf-form" render={props => (<SmurfForm {...props} addSmurfInfo={this.addSmurfInfo} />)} />
+        </Container>
+
       </div>
     );
   }

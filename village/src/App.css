@@ -1,6 +1,9 @@
 .App {
- 
   background: whitesmoke;
+}
+.smurf-logo {
+  max-inline-size: 652px;
+    margin-left: 244px;
 }
 
 /* Navigation style */
@@ -22,7 +25,7 @@
 }
 
 .smurf-form-container {
-  margin-left: 90px;
+  margin-left: 123px;
 }
 
 /* Card styling */
