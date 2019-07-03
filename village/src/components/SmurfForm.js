@@ -35,39 +35,38 @@ class SmurfForm extends Component {
     return (
       <div className="SmurfForm">
         <Container>
-        <Form onSubmit={this.addSmurf}>
-          <FormGroup>
-            <Label for='name'>Smurfy Name</Label>
-            <Input
-              onChange={this.handleInputChange}
-              placeholder="Enter name"
-              value={this.state.name}
-              name="name"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for='age'>Smurfy Age</Label>
-            <Input
-              onChange={this.handleInputChange}
-              placeholder="Enter age"
-              value={this.state.age}
-              name="age"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for='height'>Smurfy Height</Label>
-            <Input
-              onChange={this.handleInputChange}
-              placeholder="Enter height"
-              value={this.state.height}
-              name="height"
-            />
-          </FormGroup>
-          <Button color='warning' type="submit">Add to the village</Button>
-
-        </Form>
+          <Form onSubmit={this.addSmurf}>
+            <FormGroup>
+              <Label for='name'>Smurfy Name</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter name"
+                value={this.state.name}
+                name="name"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for='age'>Smurfy Age</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter age"
+                value={this.state.age}
+                name="age"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for='height'>Smurfy Height</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter height"
+                value={this.state.height}
+                name="height"
+              />
+            </FormGroup>
+            <Button outline color='warning' size='lg' block type="submit">Add to the village</Button>
+          </Form>
         </Container>
-        
+
       </div>
     );
   }
