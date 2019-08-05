@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
+// import axios from 'axios';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -12,6 +14,10 @@ class SmurfForm extends Component {
 
   addSmurf = event => {
     event.preventDefault();
+    const { name, age, height } = this.state
+    this.props.addSmurfInfo(this.state)
+    console.log('newsmurf', name, age, height)
+
     // add code to create the smurf using the api
 
     this.setState({
@@ -28,30 +34,44 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
-            onChange={this.handleInputChange}
-            placeholder="name"
-            value={this.state.name}
-            name="name"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="age"
-            value={this.state.age}
-            name="age"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="height"
-            value={this.state.height}
-            name="height"
-          />
-          <button type="submit">Add to the village</button>
-        </form>
+        <Container>
+          <Form onSubmit={this.addSmurf}>
+            <FormGroup>
+              <Label for='name'>Smurfy Name</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter name"
+                value={this.state.name}
+                name="name"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for='age'>Smurfy Age</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter age"
+                value={this.state.age}
+                name="age"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for='height'>Smurfy Height</Label>
+              <Input
+                onChange={this.handleInputChange}
+                placeholder="Enter height"
+                value={this.state.height}
+                name="height"
+              />
+            </FormGroup>
+            <Button outline color='warning' size='lg' block type="submit">Add to the village</Button>
+          </Form>
+        </Container>
+
       </div>
     );
   }
 }
 
 export default SmurfForm;
+
+

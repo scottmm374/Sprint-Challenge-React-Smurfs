@@ -1,3 +1,55 @@
 .App {
+  background: whitesmoke;
+}
+.smurf-logo {
+  max-inline-size: 652px;
+    margin-left: 244px;
+}
+
+/* Navigation style */
+.nav {
+  margin: 40px 0;
+  margin-left: 245px;
+}
+
+.nav-link {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 45px;
+  padding: 30px;
+}
+
+/* Smurf Form style */
+.SmurfForm {
+  background: DodgerBlue;
+  padding: 30px;
+}
+
+.smurf-form-container {
+  margin-left: 123px;
+}
+
+/* Card styling */
+.card-head {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  color: white;
+  background: dodgerblue;
+  margin-bottom: 50px;
+  margin-top: -40px;
+}
+
+.card {
+  border: 2px dashed orange;
+}
+
+.card-body {
+  padding: 4.25rem;
+}
+
+.Smurf {
+  margin-bottom: 34px;
+  background: orange;
+  padding: 10px;
+  border: 3px dotted dodgerblue;
   text-align: center;
 }
